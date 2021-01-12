@@ -46,6 +46,7 @@ a:hover {
 
 .bloc-lg {
     padding: 100px 50px;
+    position: relative;
 }
 
 .bloc-md {
@@ -89,12 +90,10 @@ a:hover {
     left: 0;
     right: 0;
 }
-
 .texture-paper::before {
-    background: url("img/texture-paper.png");
+    background: url("img_compressed/texture-paper.png");
     background-size: 280px 280px;
 }
-
 .b-parallax {
     background-attachment: fixed;
 }
@@ -290,6 +289,8 @@ a:hover {
 .navbar {
     margin-bottom: 0;
     z-index: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .navbar-brand {
@@ -361,7 +362,14 @@ a:hover {
     position: relative;
     z-index: 2;
 }
-
+.navbar-header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.text-center {
+    text-align: center;
+}
 @media (min-width: 768px) {
     .site-navigation {
         position: absolute;
@@ -509,7 +517,24 @@ button {
     border-color: rgba(0, 0, 0, .1);
     box-shadow: none;
 }
-
+.form-group{
+    margin-bottom: 10px;
+    width: 100%;
+}
+#form_1{
+    display: flex;
+    flex-wrap: wrap;
+}
+#bloc-button-contact{
+    display: flex;
+    justify-content: center;
+}
+.text-contact{
+    margin: auto auto auto auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
 .scrollToTop {
     width: 40px;
     height: 40px;
@@ -677,16 +702,17 @@ a {
 }
 
 p {
-    font-size: 11px;
+    font-size: 14px;
 }
 
 .tight-width-whitespace {
     max-width: 600px;
     margin: auto auto auto auto;
+    padding-top: 10px;
 }
 
 .h1 {
-    font-size: 20px;
+    font-size: 25px;
     font-family: "Open Sans";
 }
 
@@ -737,6 +763,7 @@ h4 {
 
 .white {
     color: #FFFFFF!important;
+    font-weight: 900;
 }
 
 .portfolio-thumb {
@@ -753,13 +780,14 @@ h4 {
 }
 
 .black-background {
-    background-color: rgba(165, 147, 99, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 40px 40px 40px 40px;
 }
 
 .bold-link {
     font-weight: 900;
     text-decoration: underline!important;
+    font-size: 16px;
 }
 
 .bgc-white {
@@ -772,10 +800,15 @@ h4 {
 
 .bgc-atomic-tangerine {
     background-color: #F3976C;
+    font-weight: 900;
 }
 
 .tc-white {
+    color: white!important;
+}
+.tc-tangerine{
     color: #F3976C!important;
+    font-weight: 900;
 }
 
 .btn-atomic-tangerine {
@@ -810,19 +843,19 @@ h4 {
 }
 
 .bg-dots-bg {
-    background-image: url("img/dots-bg.png");
+    background-image: url("img_compressed/dots-bg.png");
 }
 
 .bg-lines-h2-bg {
-    background-image: url("img/lines-h2-bg.png");
+    background-image: url("img_compressed/lines-h2-bg.png");
 }
 
 .bg-banniere {
-    background-image: url("img/la-chouette-agence-banniere.jpg");
+    background-image: url("img_compressed/la-chouette-agence-banniere.jpg");
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.bmp");
+    background-image: url("img_compressed/image-de-presentation.jpg");
 }
 
 @media (max-width: 1024px) {
@@ -1025,6 +1058,23 @@ h4 {
     .blocsapp-device-iphone5 img {
         width: 180px;
         height: 320px;
+    }
+    .flex-center{
+    display: flex;
+    justify-content: center;
+    }
+    .portfolio-row {
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+    .col-sm-6{
+        margin-top: 20px;
+    }
+    .social{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
     }
 }
 
